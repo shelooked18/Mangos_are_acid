@@ -1,6 +1,7 @@
 ﻿using MySql.Data;
 using MySql.Data.MySqlClient;
 using System;
+using System.Windows;
 
 namespace Data
 {
@@ -53,15 +54,36 @@ namespace Data
             return _instance;
         }
 
-        public bool IsConnect()
+        public bool Connect()
         {
             if (Connection == null)
             {
                 if (String.IsNullOrEmpty(databaseName))
                     return false;
                 string connstring = string.Format("Server=" + serverName + ";Database=mangos;User id=" + Username + ";Password=" + Password + ";persistsecurityinfo=True;port=" + PortNumber + ";SslMode=none;", databaseName);
-                connection = new MySqlConnection(connstring);
-                connection.Open();
+                try
+                {
+                    connection = new MySqlConnection(connstring);
+                    connection.Open();
+                    if (Connection != null)
+                    {
+                        // Message Popup
+                        MessageBox.Show("Successfully connected to the database! Welcome...");
+                    }
+                }
+                catch (MySql.Data.MySqlClient.MySqlException ex)
+                {
+                    switch (ex.Number)
+                    {
+                        case 0:
+                            MessageBox.Show("Could not connect to the server. Please contact administrator.");
+                            break;
+                        case 1045:
+                            MessageBox.Show("Invalid username/password, please try again");
+                            break;
+                    }
+                }
+                
             }
             return true;
         }
