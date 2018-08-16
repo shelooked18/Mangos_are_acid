@@ -37,5 +37,6 @@
         <CheckBox Content="Remember credentials" HorizontalAlignment="Right" Margin="0,263,218,0" VerticalAlignment="Top"/>
         <Image Source="/Resources/mango.png" Height="Auto" Width="Auto" Margin="259,20,500,369" RenderOptions.BitmapScalingMode="HighQuality"/>
         <Image Source="/Resources/mango.png" Height="Auto" Width="Auto" Margin="501,20,258,369" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Button Height="25" Width="60" Content="Connect" Margin="642,289,90,105"/>
     </Grid>
 </Window>
