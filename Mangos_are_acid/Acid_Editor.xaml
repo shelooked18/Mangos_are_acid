@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mangos_are_acid"
         mc:Ignorable="d"
-        Title="Acid_Editor" Height="450" Width="800">
-    <Grid>
-        
+        Title="Acid_Editor" Height="465" Width="900" ResizeMode="NoResize" >
+    <Grid Margin="0,3,0,-3">
+        <Border BorderBrush="Black" Background="White" BorderThickness="0" HorizontalAlignment="Left" Height="228" Margin="10,9,0,0" VerticalAlignment="Top" Width="867"/>
+        <Label Content="Creature ID" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="36,33,0,0" VerticalAlignment="Top" Height="27" Width="96"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="36,60,0,0" TextWrapping="Wrap" Text="16503" VerticalContentAlignment="Center" Foreground="DarkGray" VerticalAlignment="Top" Width="96"/>
+        <Button Content="Load" Background="DimGray" Foreground="White" Width="63" BorderBrush="DarkGray" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="183,60,0,0" VerticalAlignment="Top" Height="24"/>
+        <Button Content="..." BorderBrush="DarkGray" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="139,60,0,0" VerticalAlignment="Top" Width="37" Height="24"/>
+        <Label Content="Source type" HorizontalAlignment="Left" Margin="36,89,0,0" VerticalAlignment="Top"/>
+        <ComboBox Height="22" Margin="36,0,651,294" VerticalAlignment="Bottom">
+            <ComboBoxItem IsSelected="True">Creature_ai_scripts</ComboBoxItem>
+            <ComboBoxItem>Creature_ai_summons</ComboBoxItem>
+            <ComboBoxItem>Creature_ai_texts</ComboBoxItem>
+        </ComboBox>
+        <Grid Width="210" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="36,162,0,199" Height="75">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <CheckBox Content="Auto script IDs" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </Grid>
     </Grid>
 </Window>
