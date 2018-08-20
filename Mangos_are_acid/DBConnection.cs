@@ -67,8 +67,13 @@ namespace Data
                     connection.Open();
                     if (Connection != null)
                     {
-                        // Message Popup
-                        MessageBox.Show("Successfully connected to the database! Welcome...");
+                        Mangos_are_acid.Acid_Editor AE = new Mangos_are_acid.Acid_Editor();
+                        AE.Show();
+                        foreach (Window window in System.Windows.Application.Current.Windows)
+                        {
+                            if (window.Title == "CMangos - Acid editor")
+                                window.Close();
+                        }
                     }
                 }
                 catch (MySql.Data.MySqlClient.MySqlException ex)
@@ -83,7 +88,6 @@ namespace Data
                             break;
                     }
                 }
-                
             }
             return true;
         }

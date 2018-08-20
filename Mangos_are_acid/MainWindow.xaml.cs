@@ -31,19 +31,19 @@ namespace Mangos_are_acid
         private void Connect(object sender, RoutedEventArgs e)
         {
             var dbCon = DBConnection.Instance();
-            dbCon.ServerName = Server.Text;
-            dbCon.PortNumber = Port.Text;
-            dbCon.Username = Username.Text;
-            dbCon.Password = Password.Password;
-            bool remember_credentials = (bool) RememberMe.IsChecked;
+            dbCon.ServerName            = Server.Text;
+            dbCon.PortNumber            = Port.Text;
+            dbCon.Username              = Username.Text;
+            dbCon.Password              = Password.Password;
+            bool remember_credentials   = (bool) RememberMe.IsChecked;
 
             if (remember_credentials)
             {
-                Properties.Settings.Default.Server = Server.Text;
-                Properties.Settings.Default.Port = Port.Text;
-                Properties.Settings.Default.Username = Username.Text;
-                Properties.Settings.Default.Password = Password.Password;
-                Properties.Settings.Default.RememberMe = remember_credentials;
+                Properties.Settings.Default.Server      = Server.Text;
+                Properties.Settings.Default.Port        = Port.Text;
+                Properties.Settings.Default.Username    = Username.Text;
+                Properties.Settings.Default.Password    = Password.Password;
+                Properties.Settings.Default.RememberMe  = remember_credentials;
                 Properties.Settings.Default.Save();
             }
             else
@@ -52,7 +52,6 @@ namespace Mangos_are_acid
                 Properties.Settings.Default.Save();
             }
                 
-
             dbCon.Connect();
 
             //if (dbCon.Connection != null)
