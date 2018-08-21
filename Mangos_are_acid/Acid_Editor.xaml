@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mangos_are_acid"
         mc:Ignorable="d"
-        Title="Acid_Editor" Height="465" Width="900" ResizeMode="NoResize" >
+        Title="Acid_Editor" Height="465" Width="900" ResizeMode="NoResize" Foreground="Blue" >
     <Grid>
         <!-- Creature Information and preferences -->
         <DockPanel VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="0,0,0,0" Height="25">
             <Menu DockPanel.Dock="Top" VerticalContentAlignment="Center">
-                <MenuItem Header="File" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Margin="0,0,0,0">
+                <MenuItem Header="File" VerticalAlignment="Bottom" HorizontalAlignment="Center" Height="25" Margin="0,0,0,0">
                     <MenuItem Header="New" InputGestureText="Ctrl+N"/>
                     <MenuItem Header="Clear / Reset" InputGestureText="Ctrl+R"/>
                     <MenuItem Header="Save SQL" InputGestureText="Ctrl+S"/>
@@ -18,7 +18,7 @@
                     <MenuItem Header="Disconnect" InputGestureText="Ctrl+F1"/>
                     <MenuItem Header="Exit" InputGestureText="Ctrl+F2"/>
                 </MenuItem>
-                <MenuItem Header="Options" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Margin="0,0,0,0">
+                <MenuItem Header="Options" VerticalAlignment="Bottom" HorizontalAlignment="Center" Height="25" Margin="0,0,0,0">
                     <MenuItem Header="Settings" InputGestureText="Ctrl+Shift+S" />
                     <Separator />
                     <MenuItem Header="Load selected entry" InputGestureText="Ctrl+L"/>
@@ -57,7 +57,7 @@
         </DockPanel>
         <Label Content="Creature ID" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="20,30,0,0" VerticalAlignment="Top" Height="27" Width="Auto"/>
         <TextBox HorizontalAlignment="Left" Height="25" Margin="20,58,0,0" TextWrapping="Wrap" Text="16503" VerticalContentAlignment="Center" Foreground="DarkGray" VerticalAlignment="Top" Width="96"/>
-        <Button Content="Load" Background="DimGray" Foreground="White" Width="63" BorderBrush="DarkGray" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="167,58,0,0" VerticalAlignment="Top" Height="25"/>
+        <Button x:Name="load" Content="Load" Background="DimGray" Foreground="White" Width="63" BorderBrush="DarkGray" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="167,58,0,0" VerticalAlignment="Top" Height="25"/>
         <Button Content="..." BorderBrush="DarkGray" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="125,58,0,0" VerticalAlignment="Top" Width="35" Height="25" />
         <Label Content="Source type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,90,0,0" Height="25"/>
         <ComboBox Height="25" Margin="20,115,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
@@ -81,7 +81,43 @@
         </Grid>
 
         <!-- Script Information -->
-        <Separator></Separator>
-        <Label VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">Event</Label>
+        <Separator VerticalAlignment="Center"></Separator>
+        <Grid VerticalAlignment="Top" Width="Auto" Height="190" HorizontalAlignment="Center" Margin="5,30,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">Event:</Label>
+            <Label Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Width="50">Byte:</Label>
+            <ComboBox Grid.Row="1" Grid.Column="0" Height="25" >
+                <ComboBoxItem IsSelected="True">EVENT_T_TIMER_IN_COMBAT</ComboBoxItem>
+                <ComboBoxItem>Creature_ai_summons</ComboBoxItem>
+                <ComboBoxItem>Creature_ai_texts</ComboBoxItem>
+            </ComboBox>
+            <TextBox Grid.Row="1" Grid.Column="1" Width="50"></TextBox>
+            <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">Action:</Label>
+            <ComboBox Grid.Row="3" Grid.Column="0" Height="25" >
+                <ComboBoxItem IsSelected="True">EVENT_T_TIMER_IN_COMBAT</ComboBoxItem>
+                <ComboBoxItem>Creature_ai_summons</ComboBoxItem>
+                <ComboBoxItem>Creature_ai_texts</ComboBoxItem>
+            </ComboBox>
+            <TextBox Grid.Row="3" Grid.Column="1" Width="50"></TextBox>
+            <Label Grid.Row="4" Grid.Column="0" VerticalAlignment="Center">Target:</Label>
+            <ComboBox Grid.Row="5" Grid.Column="0" Height="25" >
+                <ComboBoxItem IsSelected="True">EVENT_T_TIMER_IN_COMBAT</ComboBoxItem>
+                <ComboBoxItem>Creature_ai_summons</ComboBoxItem>
+                <ComboBoxItem>Creature_ai_texts</ComboBoxItem>
+            </ComboBox>
+            <TextBox Grid.Row="5" Grid.Column="1" Width="50"></TextBox>
+        </Grid>
+        <Rectangle Width="1" VerticalAlignment="Top" Height="193" HorizontalAlignment="Center" Margin="296,25,596,0" Stroke="DarkGray" />
     </Grid>
 </Window>

@@ -22,6 +22,9 @@ namespace Mangos_are_acid
         public Acid_Editor()
         {
             InitializeComponent();
+            Color color = (Color)ColorConverter.ConvertFromString("#273b78");
+            var loadButton = (Button)this.FindName("load");
+            loadButton.Background = new SolidColorBrush(color);
         }
     }
 }
