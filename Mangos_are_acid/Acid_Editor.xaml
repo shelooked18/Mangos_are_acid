@@ -6,21 +6,67 @@
         xmlns:local="clr-namespace:Mangos_are_acid"
         mc:Ignorable="d"
         Title="Acid_Editor" Height="465" Width="900" ResizeMode="NoResize" >
-    <Grid Margin="0,3,0,-3">
-        <Border BorderBrush="Black" Background="White" BorderThickness="0" HorizontalAlignment="Left" Height="228" Margin="10,9,0,0" VerticalAlignment="Top" Width="867"/>
-        <Label Content="Creature ID" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="36,33,0,0" VerticalAlignment="Top" Height="27" Width="96"/>
-        <TextBox HorizontalAlignment="Left" Height="24" Margin="36,60,0,0" TextWrapping="Wrap" Text="16503" VerticalContentAlignment="Center" Foreground="DarkGray" VerticalAlignment="Top" Width="96"/>
-        <Button Content="Load" Background="DimGray" Foreground="White" Width="63" BorderBrush="DarkGray" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="183,60,0,0" VerticalAlignment="Top" Height="24"/>
-        <Button Content="..." BorderBrush="DarkGray" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="139,60,0,0" VerticalAlignment="Top" Width="37" Height="24"/>
-        <Label Content="Source type" HorizontalAlignment="Left" Margin="36,89,0,0" VerticalAlignment="Top"/>
-        <ComboBox Height="22" Margin="36,0,651,294" VerticalAlignment="Bottom">
+    <Grid>
+        <!-- Creature Information and preferences -->
+        <DockPanel VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="0,0,0,0" Height="25">
+            <Menu DockPanel.Dock="Top" VerticalContentAlignment="Center">
+                <MenuItem Header="File" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Margin="0,0,0,0">
+                    <MenuItem Header="New" InputGestureText="Ctrl+N"/>
+                    <MenuItem Header="Clear / Reset" InputGestureText="Ctrl+R"/>
+                    <MenuItem Header="Save SQL" InputGestureText="Ctrl+S"/>
+                    <Separator />
+                    <MenuItem Header="Disconnect" InputGestureText="Ctrl+F1"/>
+                    <MenuItem Header="Exit" InputGestureText="Ctrl+F2"/>
+                </MenuItem>
+                <MenuItem Header="Options" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Margin="0,0,0,0">
+                    <MenuItem Header="Settings" InputGestureText="Ctrl+Shift+S" />
+                    <Separator />
+                    <MenuItem Header="Load selected entry" InputGestureText="Ctrl+L"/>
+                    <MenuItem Header="Generate comment for selection" InputGestureText="Ctrl+G"/>
+                    <Separator />
+                    <MenuItem Header="Delete selected row" InputGestureText="Ctrl+D"/>
+                    <MenuItem Header="Recover last row" InputGestureText="Ctrl+Z"/>
+                    <Separator />
+                    <MenuItem Header="Duplicate " InputGestureText="Ctrl+Shift+D"/>
+                    <MenuItem Header="Copy" InputGestureText="Ctrl+C"/>
+                    <MenuItem Header="Paste" InputGestureText="Ctrl+V"/>
+                    <MenuItem Header="Cut" InputGestureText="Ctrl+X"/>
+                </MenuItem>
+                <MenuItem Header="Tools" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Margin="0,0,0,0">
+                    <MenuItem Header="Revert executed script" />
+                    <MenuItem Header="Save pastebin" />
+                    <MenuItem Header="View pastebin" />
+                </MenuItem>
+                <MenuItem Header="Documentation" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Margin="0,0,0,0">
+                    <MenuItem Header="CMangos">
+                        <MenuItem Header="Github repository" />
+                        <MenuItem Header="Issue tracker" />
+                        <MenuItem Header="Acid Wiki" />
+                    </MenuItem>
+                    <MenuItem Header="Tutorial" />
+                </MenuItem>
+                <MenuItem Header="Bug report" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Margin="0,0,0,0">
+                    <MenuItem Header="Open new issue" />
+                    <MenuItem Header="View issues" />
+                </MenuItem>
+                <MenuItem Header="About" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Margin="0,0,0,0">
+                    <MenuItem Header="What is CMangos" InputGestureText="Ctrl+F10" />
+                    <MenuItem Header="About Acid Editor" InputGestureText="Ctrl+F11"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <Label Content="Creature ID" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="20,30,0,0" VerticalAlignment="Top" Height="27" Width="Auto"/>
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="20,58,0,0" TextWrapping="Wrap" Text="16503" VerticalContentAlignment="Center" Foreground="DarkGray" VerticalAlignment="Top" Width="96"/>
+        <Button Content="Load" Background="DimGray" Foreground="White" Width="63" BorderBrush="DarkGray" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="167,58,0,0" VerticalAlignment="Top" Height="25"/>
+        <Button Content="..." BorderBrush="DarkGray" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="125,58,0,0" VerticalAlignment="Top" Width="35" Height="25" />
+        <Label Content="Source type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,90,0,0" Height="25"/>
+        <ComboBox Height="25" Margin="20,115,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
             <ComboBoxItem IsSelected="True">Creature_ai_scripts</ComboBoxItem>
             <ComboBoxItem>Creature_ai_summons</ComboBoxItem>
             <ComboBoxItem>Creature_ai_texts</ComboBoxItem>
         </ComboBox>
-        <Grid Width="210" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="36,162,0,199" Height="75">
+        <Grid Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,145,0,0" Height="Auto">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
@@ -28,7 +74,14 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-            <CheckBox Content="Auto script IDs" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <CheckBox Grid.Row="0" Grid.Column="0" Content="Auto script IDs" VerticalContentAlignment="Center" Width="105" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30"/>
+            <CheckBox Grid.Row="0" Grid.Column="1" Content="Tooltips" VerticalContentAlignment="Center" Width="105" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30"/>
+            <CheckBox Grid.Row="1" Grid.Column="0" Content="Guidelines" VerticalContentAlignment="Center" Width="105" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30"/>
+            <CheckBox Grid.Row="1" Grid.Column="1" Content="Show basic information" VerticalContentAlignment="Center" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30"/>
         </Grid>
+
+        <!-- Script Information -->
+        <Separator></Separator>
+        <Label VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0">Event</Label>
     </Grid>
 </Window>
