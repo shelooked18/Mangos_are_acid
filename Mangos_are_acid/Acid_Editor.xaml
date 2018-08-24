@@ -92,32 +92,31 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
                 <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="70"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">Event:</Label>
-            <Label Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Width="50">Byte:</Label>
-            <ComboBox Grid.Row="1" Grid.Column="0" Height="25" >
+            <ComboBox Grid.Row="0" Grid.Column="1" Height="25" >
                 <ComboBoxItem IsSelected="True">EVENT_T_TIMER_IN_COMBAT</ComboBoxItem>
                 <ComboBoxItem>Creature_ai_summons</ComboBoxItem>
                 <ComboBoxItem>Creature_ai_texts</ComboBoxItem>
             </ComboBox>
-            <TextBox Grid.Row="1" Grid.Column="1" Width="50"></TextBox>
-            <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">Action:</Label>
-            <ComboBox Grid.Row="3" Grid.Column="0" Height="25" >
+            <TextBox Grid.Row="0" Grid.Column="2" Width="50"></TextBox>
+            <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Action:</Label>
+            <ComboBox Grid.Row="1" Grid.Column="1" Height="25" >
                 <ComboBoxItem IsSelected="True">EVENT_T_TIMER_IN_COMBAT</ComboBoxItem>
                 <ComboBoxItem>Creature_ai_summons</ComboBoxItem>
                 <ComboBoxItem>Creature_ai_texts</ComboBoxItem>
             </ComboBox>
-            <TextBox Grid.Row="3" Grid.Column="1" Width="50"></TextBox>
-            <Label Grid.Row="4" Grid.Column="0" VerticalAlignment="Center">Target:</Label>
-            <ComboBox Grid.Row="5" Grid.Column="0" Height="25" >
+            <TextBox Grid.Row="1" Grid.Column="2" Width="50"></TextBox>
+            <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">Target:</Label>
+            <ComboBox Grid.Row="2" Grid.Column="1" Height="25" >
                 <ComboBoxItem IsSelected="True">EVENT_T_TIMER_IN_COMBAT</ComboBoxItem>
                 <ComboBoxItem>Creature_ai_summons</ComboBoxItem>
                 <ComboBoxItem>Creature_ai_texts</ComboBoxItem>
             </ComboBox>
-            <TextBox Grid.Row="5" Grid.Column="1" Width="50"></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="2" Width="50"></TextBox>
         </Grid>
-        <Rectangle Width="1" VerticalAlignment="Top" Height="193" HorizontalAlignment="Center" Margin="296,25,596,0" Stroke="DarkGray" />
     </Grid>
 </Window>
