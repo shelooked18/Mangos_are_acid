@@ -116,5 +116,116 @@
             <Label Content="Comment:" Grid.Row="6" Margin="0,20,0,0" Width="Auto"></Label>
             <TextBox Grid.Row="6" Grid.Column="1" Margin="0,20,0,0" Height="25" VerticalContentAlignment="Center" MaxLength="255" LostFocus="TextBox_LostFocus" Name="Comment">Not specified yet.</TextBox>
         </Grid>
+
+        <!-- Parameters -->
+        <TabControl Width="285" Height="170" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,30,10,0">
+            <TabItem Header="Event">
+                <Grid>
+                    <!-- 5 Rows -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="25"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <!-- 2 Columns -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="160"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Event param1:" Grid.Row="0" Grid.Column="0" Name="lb_event_param1"></Label>
+                    <Label Content="Event param2:" Grid.Row="1" Grid.Column="0" Name="lb_event_param2" Margin="0,5,0,0"></Label>
+                    <Label Content="Event param3:" Grid.Row="2" Grid.Column="0" Name="lb_event_param3" Margin="0,5,0,0"></Label>
+                    <Label Content="Event param4:" Grid.Row="3" Grid.Column="0" Name="lb_event_param4" Margin="0,5,0,0"></Label>
+                    <TextBox Grid.Row="0" Grid.Column="1" Margin="20,5,0,0" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="10" LostFocus="TextBox_LostFocus" Name="tb_event_param1">0</TextBox>
+                    <TextBox Grid.Row="1" Grid.Column="1" Margin="20,5,0,0" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="10" LostFocus="TextBox_LostFocus" Name="tb_event_param2">0</TextBox>
+                    <TextBox Grid.Row="2" Grid.Column="1" Margin="20,5,0,0" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="10" LostFocus="TextBox_LostFocus" Name="tb_event_param3">0</TextBox>
+                    <TextBox Grid.Row="3" Grid.Column="1" Margin="20,5,0,0" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="10" LostFocus="TextBox_LostFocus" Name="tb_event_param4">0</TextBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Action 1">
+                <Grid>
+                    <!-- 5 Rows -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="25"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <!-- 2 Columns -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="160"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Action1 param1:" Grid.Row="0" Grid.Column="0" Name="lb_action1_param1"></Label>
+                    <Label Content="Action1 param2:" Grid.Row="1" Grid.Column="0" Name="lb_action1_param2" Margin="0,5,0,0"></Label>
+                    <Label Content="Action1 param3:" Grid.Row="2" Grid.Column="0" Name="lb_action1_param3" Margin="0,5,0,0"></Label>
+                    <TextBox Grid.Row="0" Grid.Column="1" Margin="20,5,0,0" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="10" LostFocus="TextBox_LostFocus" Name="tb_action1_param1">0</TextBox>
+                    <TextBox Grid.Row="1" Grid.Column="1" Margin="20,5,0,0" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="10" LostFocus="TextBox_LostFocus" Name="tb_action1_param2">0</TextBox>
+                    <TextBox Grid.Row="2" Grid.Column="1" Margin="20,5,0,0" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="10" LostFocus="TextBox_LostFocus" Name="tb_action1_param3">0</TextBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Action 2">
+                <Grid>
+                    <!-- 5 Rows -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="25"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <!-- 2 Columns -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="160"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Action1 param1:" Grid.Row="0" Grid.Column="0" Name="lb_action2_param1"></Label>
+                    <Label Content="Action1 param2:" Grid.Row="1" Grid.Column="0" Name="lb_action2_param2" Margin="0,5,0,0"></Label>
+                    <Label Content="Action1 param3:" Grid.Row="2" Grid.Column="0" Name="lb_action2_param3" Margin="0,5,0,0"></Label>
+                    <TextBox Grid.Row="0" Grid.Column="1" Margin="20,5,0,0" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="10" LostFocus="TextBox_LostFocus" Name="tb_action2_param1">0</TextBox>
+                    <TextBox Grid.Row="1" Grid.Column="1" Margin="20,5,0,0" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="10" LostFocus="TextBox_LostFocus" Name="tb_action2_param2">0</TextBox>
+                    <TextBox Grid.Row="2" Grid.Column="1" Margin="20,5,0,0" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="10" LostFocus="TextBox_LostFocus" Name="tb_action2_param3">0</TextBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Action 3">
+                <Grid>
+                    <!-- 5 Rows -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="25"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <!-- 2 Columns -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="160"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Action1 param1:" Grid.Row="0" Grid.Column="0" Name="lb_action3_param1"></Label>
+                    <Label Content="Action1 param2:" Grid.Row="1" Grid.Column="0" Name="lb_action3_param2" Margin="0,5,0,0"></Label>
+                    <Label Content="Action1 param3:" Grid.Row="2" Grid.Column="0" Name="lb_action3_param3" Margin="0,5,0,0"></Label>
+                    <TextBox Grid.Row="0" Grid.Column="1" Margin="20,5,0,0" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="10" LostFocus="TextBox_LostFocus" Name="tb_action3_param1">0</TextBox>
+                    <TextBox Grid.Row="1" Grid.Column="1" Margin="20,5,0,0" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="10" LostFocus="TextBox_LostFocus" Name="tb_action3_param2">0</TextBox>
+                    <TextBox Grid.Row="2" Grid.Column="1" Margin="20,5,0,0" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="10" LostFocus="TextBox_LostFocus" Name="tb_action3_param3">0</TextBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Grid Height="40" Width="285" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,30,10,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"></ColumnDefinition>
+                <ColumnDefinition Width="120"></ColumnDefinition>
+                <ColumnDefinition Width="90"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Content="New event"></Button>
+            <Button Grid.Row="0" Grid.Column="1" Content="Generate comment" Margin="10,0,0,0"></Button>
+            <Button Grid.Row="0" Grid.Column="2" Content="Generate SQL" Margin="10,0,0,0"></Button>
+        </Grid>
     </Grid>
 </Window>
