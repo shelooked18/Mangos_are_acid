@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,6 +23,36 @@ namespace Mangos_are_acid
         public Acid_Editor()
         {
             InitializeComponent();
+            Console.WriteLine("Phasemask max value:" + Int32.MaxValue);
+        }
+
+        private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            var textBox = sender as TextBox;
+            e.Handled = Regex.IsMatch(e.Text, "[^0-9]+");
+        }
+
+        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            // Reset the value of the textbox when it's left empty
+            try
+            {
+                if (Event.Text == "")
+                    Event.Text = "0";
+
+                if (Action.Text == "")
+                    Action.Text = "0";
+
+                if (Phasemask.Text == "")
+                    Phasemask.Text = "0";
+
+                if (Comment.Text == "")
+                    Comment.Text = "Not Specified yet.";
+            }
+            catch(Exception ex)
+            {
+                Console.Write(ex.ToString());
+            }
         }
     }
 }

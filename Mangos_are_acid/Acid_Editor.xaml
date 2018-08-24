@@ -56,7 +56,7 @@
             </Menu>
         </DockPanel>
         <Label Content="Creature ID" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="20,30,0,0" VerticalAlignment="Top" Height="27" Width="Auto"/>
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="20,58,0,0" TextWrapping="Wrap" Text="16503" VerticalContentAlignment="Center" Foreground="DarkGray" VerticalAlignment="Top" Width="96"/>
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="20,58,0,0" TextWrapping="Wrap" Text="16503" VerticalContentAlignment="Center" Foreground="DarkGray" VerticalAlignment="Top" Width="96" PreviewTextInput="TextBox_PreviewTextInput"/>
         <Button x:Name="load" Content="Load" Background="DimGray" Foreground="White" Width="63" BorderBrush="DarkGray" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="167,58,0,0" VerticalAlignment="Top" Height="25"/>
         <Button Content="..." BorderBrush="DarkGray" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="125,58,0,0" VerticalAlignment="Top" Width="35" Height="25" />
         <Label Content="Source type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,90,0,0" Height="25"/>
@@ -103,18 +103,18 @@
                 <ComboBoxItem>Creature_ai_summons</ComboBoxItem>
                 <ComboBoxItem>Creature_ai_texts</ComboBoxItem>
             </ComboBox>
-            <TextBox Grid.Row="1" Grid.Column="0" Width="50" HorizontalAlignment="Left" Height="25" VerticalContentAlignment="Center">0</TextBox>
-            <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">Target:</Label>
+            <TextBox Grid.Row="1" Grid.Column="0" Width="50" HorizontalAlignment="Left" Height="25" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="2" LostFocus="TextBox_LostFocus" Name="Event">0</TextBox>
+            <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">Action:</Label>
             <ComboBox Grid.Row="3" Grid.Column="1" Height="25" >
                 <ComboBoxItem IsSelected="True">EVENT_T_TIMER_IN_COMBAT</ComboBoxItem>
                 <ComboBoxItem>Creature_ai_summons</ComboBoxItem>
                 <ComboBoxItem>Creature_ai_texts</ComboBoxItem>
             </ComboBox>
-            <TextBox Grid.Row="3" Grid.Column="0" Width="50" HorizontalAlignment="Left" Height="25" VerticalContentAlignment="Center">0</TextBox>
+            <TextBox Grid.Row="3" Grid.Column="0" Width="50" HorizontalAlignment="Left" Height="25" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="2" LostFocus="TextBox_LostFocus" Name="Action">0</TextBox>
            <Label Content="Phasemask:" Grid.Row="5" Grid.Column="0" Margin="0,10,0,0"></Label>
-            <TextBox Grid.Row="5" Grid.Column="1" Width="50" HorizontalAlignment="Left" Margin="0,10,0,0" Height="25" VerticalContentAlignment="Center">0</TextBox>
+            <TextBox Grid.Row="5" Grid.Column="1" Width="50" HorizontalAlignment="Left" Margin="0,10,0,0" Height="25" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" MaxLength="10" LostFocus="TextBox_LostFocus" Name="Phasemask">0</TextBox>
             <Label Content="Comment:" Grid.Row="6" Margin="0,20,0,0" Width="Auto"></Label>
-            <TextBox Grid.Row="6" Grid.Column="1" Margin="0,20,0,0" Height="25" VerticalContentAlignment="Center">Not specified yet</TextBox>
+            <TextBox Grid.Row="6" Grid.Column="1" Margin="0,20,0,0" Height="25" VerticalContentAlignment="Center" MaxLength="255" LostFocus="TextBox_LostFocus" Name="Comment">Not specified yet.</TextBox>
         </Grid>
     </Grid>
 </Window>
