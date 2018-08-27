@@ -81,6 +81,7 @@
     <Compile Include="Acid_Editor.xaml.cs">
       <DependentUpon>Acid_Editor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataGridGeneration.cs" />
     <Compile Include="Settings.cs" />
     <Page Include="Acid_Editor.xaml">
       <SubType>Designer</SubType>
