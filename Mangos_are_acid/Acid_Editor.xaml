@@ -246,7 +246,7 @@
         </Grid>
         <Label Content="Event Progress:" HorizontalAlignment="Left" Margin="20,210,0,0" VerticalAlignment="Top"></Label>
         <StatusBar HorizontalAlignment="Left" Height="20" Margin="120,215,0,0" VerticalAlignment="Top" Width="150"/>
-        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" Height="190" Width="884" VerticalAlignment="Bottom">
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Height="190" Width="884" VerticalAlignment="Bottom">
             <Grid>
                 <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Height="25" VerticalAlignment="Top"></Rectangle>
                 <Label Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="ID"></Label>
