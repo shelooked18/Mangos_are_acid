@@ -24,6 +24,7 @@ namespace Mangos_are_acid
         {
             InitializeComponent();
             Console.WriteLine("Phasemask max value:" + Int32.MaxValue);
+            
         }
 
         private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)

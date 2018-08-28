@@ -247,32 +247,9 @@
         <Label Content="Event Progress:" HorizontalAlignment="Left" Margin="20,210,0,0" VerticalAlignment="Top"></Label>
         <StatusBar HorizontalAlignment="Left" Height="20" Margin="120,215,0,0" VerticalAlignment="Top" Width="150"/>
         <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Height="190" Width="884" VerticalAlignment="Bottom">
-            <Grid>
-                <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Height="25" VerticalAlignment="Top"></Rectangle>
-                <Label Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="ID"></Label>
-                <Label Margin="40,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Creature id"></Label>
-                <Label Margin="110,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Event type"></Label>
-                <Label Margin="180,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Phasemask"></Label>
-                <Label Margin="250,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Chance"></Label>
-                <Label Margin="300,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Event flags"></Label>
-                <Label Margin="370,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Event param1"></Label>
-                <Label Margin="460,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Event param2"></Label>
-                <Label Margin="545,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Event param3"></Label>
-                <Label Margin="630,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Event param4"></Label>
-                <Label Margin="715,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Action1 type"></Label>
-                <Label Margin="795,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Action1 param1"></Label>
-                <Label Margin="895,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Action1 param2"></Label>
-                <Label Margin="995,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Action1 param3"></Label>
-                <Label Margin="1095,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Action2 type"></Label>
-                <Label Margin="1175,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Action2 param1"></Label>
-                <Label Margin="1275,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Action2 param2"></Label>
-                <Label Margin="1375,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Action2 param3"></Label>
-                <Label Margin="1475,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Action3 type"></Label>
-                <Label Margin="1555,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Action3 param1"></Label>
-                <Label Margin="1655,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Action3 param2"></Label>
-                <Label Margin="1755,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Action3 param3"></Label>
-                <Label Margin="1855,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Comment"></Label>
-            </Grid>
+            <DataGrid Name="Event_Grid">
+                
+            </DataGrid>
         </ScrollViewer>
     </Grid>
 </Window>
